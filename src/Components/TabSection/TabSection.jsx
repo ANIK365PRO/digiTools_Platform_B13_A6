@@ -1,10 +1,11 @@
 import React, { use, useState } from 'react';
-import ProductsCard from './ProductsCard/ProductsCard';
+import Products from './Procudts/Products';
 import CartContainer from './CartContainer/CartContainer';
+
 
 const TabSection = ({productsPromise}) => {
     const productsData = use(productsPromise)
-    console.log(productsData)
+    // console.log(productsData)
 
     const [activeTab, setActiveTab] = useState('Products')
     const handleActiveTab = (tab) => {
@@ -42,7 +43,7 @@ const TabSection = ({productsPromise}) => {
 
                     {
                         activeTab === "Products" ? 
-                        <ProductsCard></ProductsCard> : 
+                        <Products productsData={productsData}></Products>: 
                         <CartContainer></CartContainer>
                     }
         
