@@ -8,6 +8,15 @@ import StepsSection from './Components/StepsSection/StepsSection'
 import TabSection from './Components/TabSection/TabSection'
 import WorkflowSection from './Components/WorkflowScetion/WorkflowSection'
 
+
+const getProductsData = async() => {
+    const res = await fetch('/products.json')
+    return res.json()
+} 
+const productsPromise = getProductsData()
+
+
+
 function App() {
   
   return (
@@ -15,7 +24,7 @@ function App() {
     <NavBar></NavBar>
     <Banner></Banner>
     <Status></Status>
-    {/* <TabSection></TabSection> */}
+    <TabSection productsPromise={productsPromise}></TabSection>
     <StepsSection></StepsSection>
     <PricingSection></PricingSection>
     {/* <WorkflowSection></WorkflowSection> */}

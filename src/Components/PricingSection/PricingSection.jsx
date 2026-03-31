@@ -15,7 +15,7 @@ const PricingSection = () => {
         <div className='py-16 md:py-20 lg:py-30 max-w-7xl mx-auto '>
             <section className='space-y-4 text-center'>
                 <h3 className=' text-3xl lg:text-5xl font-extrabold '>Simple, Transparent Pricing</h3>
-                <p className='text-[#627382FF]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+                <p className='text-[#627382FF] text-xl'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </section>
 
             <section className='mt-10 px-5 lg:px-0 grid md:grid-cols-3 gap-7'>
@@ -39,7 +39,7 @@ const PricingSection = () => {
 
 
                             {
-                                pricingCard.features.map(feature =><li>
+                                pricingCard.features.map((feature, index )=><li key={index}>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                      <span>{feature}</span>
                                 </li>  

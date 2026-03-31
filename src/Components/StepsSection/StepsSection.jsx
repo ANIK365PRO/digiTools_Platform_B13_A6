@@ -6,7 +6,7 @@ const StepsSection = () => {
         <div className='bg-[#f9fafc] py-16 md:py-20  lg:py-30'>
             <section className='max-w-7xl mx-auto space-y-4 text-center px-5 lg:px-0 '>
                 <h3 className=' text-3xl lg:text-5xl font-extrabold '>Get Started in 3 Steps</h3>
-                <p className='text-[#627382FF]'>Using premiuStart m digital tools in minut es, not hours.</p>
+                <p className='text-[#627382FF] text-xl'>Using premium Start digital tools in minutes, not hours.</p>
             </section>
 
 

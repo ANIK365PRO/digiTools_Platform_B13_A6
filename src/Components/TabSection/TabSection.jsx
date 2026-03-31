@@ -1,19 +1,55 @@
-import React from 'react';
+import React, { use, useState } from 'react';
+import ProductsCard from './ProductsCard/ProductsCard';
+import CartContainer from './CartContainer/CartContainer';
 
-const TabSection = () => {
+const TabSection = ({productsPromise}) => {
+    const productsData = use(productsPromise)
+    console.log(productsData)
+
+    const [activeTab, setActiveTab] = useState('Products')
+    const handleActiveTab = (tab) => {
+        setActiveTab(tab)
+    }
+
     return (
         <div>
-             <div className='flex flex-col gap-4'>
-                                <p className='text-[#4F39F6] font-medium text-lg bg-[#E1E7FF] py-2 px-6 w-fit rounded-3xl'>New: AI-Powered Tools Available</p>
-                                <h1 className='font-bold text-6xl'>Supercharge Your? Digital Workflow</h1>
-                                <p className='text-4'>Access premium AI tools, design assets, templates, and productivity <br />
-                                software—all in one place. Start creating faster today. <br />
-                                Explore Products</p>
-                                <div className='space-x-4'>
-                                    <button className='bg-[#4F39F6] btn text-white font-bold tex-lg rounded-3xl'>Explore Products</button>
-                                    <button className='btn font-bold tex-lg rounded-3xl'> Watch Demo</button>
-                                </div>
-                            </div>
+             <div className='max-w-7xl mx-auto py-16 md:py-20 lg:py-30 px-5 lg:px-0  flex flex-col gap-4'>
+                <section className='space-y-4 text-center'>
+                    <h3 className=' text-3xl lg:text-5xl font-extrabold '>Premium Digital Tools</h3>
+
+                    <p className='text-[#627382FF] text-xl'>Choose from our curated collection of premium digital products designed <br />
+                    to boost your productivity and creativity.</p>
+
+                    {/* name of each tab group should be unique */}
+                    <div className="tabs tabs-box bg-transparent justify-center pt-5">
+                        <input 
+                         type="radio"
+                         name="my_tabs_1" 
+                         className={`tab text-lg font-bold text-black w-40 rounded-2xl border ${activeTab === 'Products' && 'btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'}`} 
+                         aria-label="Products" 
+                         onClick={()=> handleActiveTab('Products')}
+                         defaultChecked/>
+                        <input
+                         type="radio" 
+                         name="my_tabs_1" 
+                         className={`tab text-lg font-bold text-black w-40 rounded-2xl border ${activeTab === 'Cart' && 'btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'}`} 
+                         aria-label="Cart (0)" 
+                          onClick={()=> handleActiveTab('Cart')} />
+                      
+                    </div>
+                </section>
+                <section>
+
+                    {
+                        activeTab === "Products" ? 
+                        <ProductsCard></ProductsCard> : 
+                        <CartContainer></CartContainer>
+                    }
+        
+
+
+                </section>
+            </div>
         </div>
     );
 };
