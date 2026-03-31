@@ -16,7 +16,7 @@ function App() {
     <Banner></Banner>
     <Status></Status>
     {/* <TabSection></TabSection> */}
-    {/* <StepsSection></StepsSection> */}
+    <StepsSection></StepsSection>
     <PricingSection></PricingSection>
     {/* <WorkflowSection></WorkflowSection> */}
     {/* <Footer></Footer> */}

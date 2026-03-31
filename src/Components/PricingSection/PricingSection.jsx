@@ -12,16 +12,16 @@ const PricingSection = () => {
     console.log(pricingInfo)
 
     return (
-        <div className='my-16 md:my-20 lg:my-30 max-w-7xl mx-auto border'>
+        <div className='py-16 md:py-20 lg:py-30 max-w-7xl mx-auto '>
             <section className='space-y-4 text-center'>
-                <h3 className=' text-5xl font-extrabold '>Simple, Transparent Pricing</h3>
+                <h3 className=' text-3xl lg:text-5xl font-extrabold '>Simple, Transparent Pricing</h3>
                 <p className='text-[#627382FF]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </section>
 
             <section className='mt-10 px-5 lg:px-0 grid md:grid-cols-3 gap-7'>
                
                {
-                pricingInfo.map(pricingCard =>  <div key={pricingCard.id} className={`card w-full ${pricingCard.status ? 'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white' : 'bg-[#f9fafcFF]'  }  shadow-lg`}>
+                pricingInfo.map(pricingCard =>  <div key={pricingCard.id} className={`card w-full ${pricingCard.status ? 'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white' : 'bg-[#f9fafcFF]'  }  border-[#f1f1f1FF]  shadow-lg`}>
                     <div className="card-body">
 
                         <p className="flex justify-center items-center ">
@@ -49,7 +49,7 @@ const PricingSection = () => {
                         
                         </ul>
                         <div className="mt-6">
-                        <button className={`btn btn-primary ${pricingCard.status? 'bg-[#f9fafcFF] text-[#AF2CF3]' : 'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'} btn-block`}>{pricingCard.buttonName}</button>
+                        <button className={`btn btn-primary ${pricingCard.status? 'bg-[#f9fafcFF] text-[#AF2CF3]' : 'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'} btn-block font-bold rounded-2xl`}>{pricingCard.buttonName}</button>
                         </div>
                     </div>
                 </div>)
