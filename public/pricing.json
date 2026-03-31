@@ -1,0 +1,49 @@
+[
+  {
+    "id": 101,
+    "name": "Starter Plan",
+    "title": "Perfect for beginners",
+    "price": 0,
+    "features": [
+      "Basic dashboard access",
+      "5 projects limit",
+      "Community support",
+      "Basic analytics",
+      "Limited templates"
+    ],
+    "status": false,
+    "buttonName": "Get Started"
+  },
+  {
+    "id": 202,
+    "name": "Pro Plan",
+    "title": "Best for growing users",
+    "price": 12,
+    "features": [
+      "Unlimited projects",
+      "Advanced analytics",
+      "Priority email support",
+      "100+ premium templates",
+      "Export to PDF & CSV",
+      "Team collaboration"
+    ],
+    "status": true,
+     "buttonName": "Upgrade Now"
+  },
+  {
+    "id": 303,
+    "name": "Enterprise Plan",
+    "title": "For large teams & businesses",
+    "price": 29,
+    "features": [
+      "All Pro features",
+      "Unlimited team members",
+      "Dedicated account manager",
+      "Custom integrations",
+      "API access",
+      "Advanced security & SSO"
+    ],
+    "status": false,
+     "buttonName": "Contact Sales"
+  }
+]

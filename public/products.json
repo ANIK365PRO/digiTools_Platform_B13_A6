@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "name": "Resume Builder Pro",
+    "description": "Create professional resumes with ATS-friendly templates.",
+    "price": 5.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF",
+      "Real-time preview"
+    ],
+    "icon": "📄"
+  },
+  {
+    "id": 2,
+    "name": "AI Content Writer",
+    "description": "Generate high-quality blog and marketing content using AI.",
+    "price": 12.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "AI blog generator",
+      "SEO optimization",
+      "Multiple tones",
+      "Unlimited drafts"
+    ],
+    "icon": "✍️"
+  },
+  {
+    "id": 3,
+    "name": "Social Media Scheduler",
+    "description": "Plan and automate posts across multiple social platforms.",
+    "price": 8.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Auto scheduling",
+      "Multi-platform support",
+      "Analytics dashboard",
+      "Post templates"
+    ],
+    "icon": "📅"
+  },
+  {
+    "id": 4,
+    "name": "Website Builder",
+    "description": "Build responsive websites without coding.",
+    "price": 49.99,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Drag & drop editor",
+      "Free hosting",
+      "Custom domains",
+      "SEO tools"
+    ],
+    "icon": "🌐"
+  },
+  {
+    "id": 5,
+    "name": "Graphic Design Toolkit",
+    "description": "Create stunning visuals for social media and branding.",
+    "price": 6.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Templates library",
+      "Photo editing",
+      "Icons & elements",
+      "Brand kit"
+    ],
+    "icon": "🎨"
+  },
+  {
+    "id": 6,
+    "name": "Password Manager",
+    "description": "Securely store and manage your passwords.",
+    "price": 3.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "Encrypted storage",
+      "Auto-fill login",
+      "Cross-device sync",
+      "Security alerts"
+    ],
+    "icon": "🔐"
+  },
+  {
+    "id": 7,
+    "name": "Cloud Storage Plus",
+    "description": "Store and access your files from anywhere.",
+    "price": 2.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100GB storage",
+      "File sharing",
+      "Backup system",
+      "Mobile access"
+    ],
+    "icon": "☁️"
+  },
+  {
+    "id": 8,
+    "name": "Online Course Creator",
+    "description": "Create and sell online courses بسهولة.",
+    "price": 79.99,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Video hosting",
+      "Quiz builder",
+      "Student analytics",
+      "Payment integration"
+    ],
+    "icon": "🎓"
+  },
+  {
+    "id": 9,
+    "name": "Email Marketing Tool",
+    "description": "Design and send email campaigns that convert.",
+    "price": 10.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "Email templates",
+      "Automation workflows",
+      "A/B testing",
+      "Subscriber analytics"
+    ],
+    "icon": "📧"
+  },
+  {
+    "id": 10,
+    "name": "Project Management App",
+    "description": "Organize tasks and collaborate with your team.",
+    "price": 7.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Task boards",
+      "Team collaboration",
+      "Deadline tracking",
+      "Notifications"
+    ],
+    "icon": "📊"
+  },
+  {
+    "id": 11,
+    "name": "Video Editing Suite",
+    "description": "Edit videos professionally with advanced tools.",
+    "price": 59.99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best",
+    "features": [
+      "Timeline editor",
+      "Effects & transitions",
+      "4K export",
+      "Audio editing"
+    ],
+    "icon": "🎬"
+  },
+  {
+    "id": 12,
+    "name": "VPN Service",
+    "description": "Browse securely and access global content.",
+    "price": 4.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Secure encryption",
+      "Global servers",
+      "No logs policy",
+      "Fast connection"
+    ],
+    "icon": "🛡️"
+  }
+]
