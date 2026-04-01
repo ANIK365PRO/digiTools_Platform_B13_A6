@@ -34,7 +34,7 @@ const TabSection = ({productsPromise, cart, setCart}) => {
                          type="radio" 
                          name="my_tabs_1" 
                          className={`tab text-lg font-bold text-black w-30 lg:w-40 rounded-3xl border ${activeTab === 'Cart' && 'btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'}`} 
-                         aria-label="Cart (0)" 
+                         aria-label={`Cart (${cart.length})`} 
                           onClick={()=> handleActiveTab('Cart')} />
                       
                     </div>

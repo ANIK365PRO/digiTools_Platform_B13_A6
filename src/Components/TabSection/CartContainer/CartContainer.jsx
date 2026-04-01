@@ -13,6 +13,15 @@ const CartContainer = ({cart, setCart}) => {
         setCart([])
     }  
 
+    // cart item delate when click delate btn
+    const handleDelateItem = (item) =>{
+        // console.log(item)
+        const filteredProduct = cart.filter(units => units.id !== item.id )
+        setCart(filteredProduct) 
+    }
+
+
+
     return (
         <ul className="list bg-base-100 rounded-box shadow-md border-t border-zinc-100 py-6 lg:py-10 mt-5">
   
@@ -30,7 +39,9 @@ const CartContainer = ({cart, setCart}) => {
                     <div className="text-sm md:text-xl font-bold opacity-60">$ {item.price}</div>
                     </div>
                     
-                    <button className="btn btn-square btn-ghost bg-base-100">
+                    <button 
+                        onClick={()=>handleDelateItem(item)}
+                        className="btn btn-square btn-ghost bg-base-100">
                         X
                     </button>
                  </li>)
@@ -47,12 +58,14 @@ const CartContainer = ({cart, setCart}) => {
                 <FiShoppingCart className='h-10 w-10 lg:h-16 lg:w-16 opacity-60'/>
                 <p className='font-bold text-xl opacity-60'>Your cart is empty.</p>
             </div> :
-            <div>
+            <div className=' overflow-hidden'>
                 <li className="px-5 md:px-7 lg:px-12 opacity-60 tracking-wide flex items-center justify-between text-2xl font-bold"><span>Total</span><span>$ {totalPrice}</span></li>
 
-                <button 
+                <div className='px-4 md:px-4 lg:px-10 py-2  flex justify-center items-center'>
+                    <button 
                 onClick={handleCheck}
-                className="btn btn-ghost bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white font-bold mt-4 mx-4 md:mx-6 lg:mx-10 tracking-wide text-2xl rounded-3xl text-center">Proceed to Checkout</button>
+                className="btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white font-bold mt-4 mx-4 md:mx-6 lg:mx-10 tracking-wide text-2xl rounded-3xl w-full">Proceed to Checkout</button>
+                </div>
             </div>
         }
          
