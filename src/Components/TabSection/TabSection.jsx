@@ -43,12 +43,14 @@ const TabSection = ({productsPromise, cart, setCart}) => {
 
                     {
                         activeTab === "Products" ? 
-                        <Products 
-                        productsData={productsData}
-                        cart={cart} 
-                        setCart={setCart}
-                        ></Products>: 
-                        <CartContainer></CartContainer>
+                            <Products 
+                                productsData={productsData}
+                                cart={cart} 
+                                setCart={setCart} ></Products>: 
+
+                            <CartContainer
+                                cart={cart} 
+                                setCart={setCart} ></CartContainer>
                     }
         
 

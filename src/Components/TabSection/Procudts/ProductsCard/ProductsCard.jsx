@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { FaCheck } from 'react-icons/fa';
+
 
 const ProductsCard = ({product, cart, setCart}) => {
 
     const [isBuy, setIsBuy] = useState(false)
-    const handleIsBuy = () =>{
+    const handleIsBuy = (product) =>{
+        // console.log(product)
+
         setIsBuy(true)
+        setCart([...cart, product])
+
     }
 
     return (
@@ -40,11 +46,12 @@ const ProductsCard = ({product, cart, setCart}) => {
                         </ul>
                         <div className="mt-6">
                         <button 
-                        onClick={handleIsBuy}
+                        onClick={() => handleIsBuy(product)}
                         className={`btn 
                             ${isBuy? 'bg-linear-to-r from-green-600 vai-green-500 to-green-400 text-white' : 
                             'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'} btn-block text-lg font-bold rounded-3xl`}>
-                            {isBuy? 'Add to Cart': 'Buy Now'}
+                                
+                            {isBuy&&  <FaCheck />} {isBuy?' Add to Cart': 'Buy Now'}
                         </button>
                         </div>
             </div>

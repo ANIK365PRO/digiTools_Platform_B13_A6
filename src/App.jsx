@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Banner from './Components/Banner/Banner'
 import Footer from './Components/Footer/Footer'
@@ -18,13 +19,18 @@ const productsPromise = getProductsData()
 
 
 function App() {
+  const [cart, setCart] = useState([])
+
+  console.log(cart)
   
+
+
   return (
   <>
     <NavBar></NavBar>
     <Banner></Banner>
     <Status></Status>
-    <TabSection productsPromise={productsPromise}></TabSection>
+    <TabSection productsPromise={productsPromise} cart={cart} setCart={setCart}></TabSection>
     <StepsSection></StepsSection>
     <PricingSection></PricingSection>
     {/* <WorkflowSection></WorkflowSection> */}
