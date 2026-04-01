@@ -7,6 +7,7 @@ const CartContainer = ({cart, setCart}) => {
 
     // for count total price use reduce loop 
     const totalPrice = cart.reduce((sum, item) => sum + item.price, 0)
+    
     // console.log(totalPrice)
 
     // for handle Checkout when payment clear

@@ -3,7 +3,7 @@ import { FaCheck } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 
-const ProductsCard = ({product, cart, setCart}) => {
+const ProductsCard = ({product, cart, setCart, setGetPrice}) => {
 
     const [isBuy, setIsBuy] = useState(false)
     const handleIsBuy = (product) =>{
@@ -12,9 +12,17 @@ const ProductsCard = ({product, cart, setCart}) => {
         setIsBuy(true)
         setCart([...cart, product])
          toast.success(`${product.name}, is add to cart.`)
-
+        handleGetTotalItemsPrice()
     }
-
+    
+    // for navBar cart , when item select then price count 
+    const handleGetTotalItemsPrice = () =>{
+        
+        const totalPrice = cart.reduce((sum, product) => sum + product.price, product.price)
+           setGetPrice(totalPrice);
+        
+    }
+        
     return (
         <div className={`card w-full shadow-2xl rounded-3xl py-5`}>
             <div className="card-body">

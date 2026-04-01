@@ -3,7 +3,7 @@ import Products from './Procudts/Products';
 import CartContainer from './CartContainer/CartContainer';
 
 
-const TabSection = ({productsPromise, cart, setCart}) => {
+const TabSection = ({productsPromise, cart, setCart, setGetPrice}) => {
     const productsData = use(productsPromise)
     // console.log(productsData)
 
@@ -46,11 +46,14 @@ const TabSection = ({productsPromise, cart, setCart}) => {
                             <Products 
                                 productsData={productsData}
                                 cart={cart} 
-                                setCart={setCart} ></Products>: 
+                                setCart={setCart} 
+                                 setGetPrice={setGetPrice}
+                                ></Products>: 
 
                             <CartContainer
                                 cart={cart} 
-                                setCart={setCart} ></CartContainer>
+                                setCart={setCart}                           
+                                ></CartContainer>
                     }
         
 

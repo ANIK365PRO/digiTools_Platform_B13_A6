@@ -22,14 +22,16 @@ const productsPromise = getProductsData()
 function App() {
   const [cart, setCart] = useState([])
   
-
+  // for navBar cart price count 
+  const [getPrice, setGetPrice] = useState(0)
+  console.log(getPrice)
 
   return (
   <>
-    <NavBar></NavBar>
+    <NavBar cart={cart} getPrice={getPrice}></NavBar>
     <Banner></Banner>
     <Status></Status>
-    <TabSection productsPromise={productsPromise} cart={cart} setCart={setCart}></TabSection>
+    <TabSection productsPromise={productsPromise} cart={cart} setCart={setCart} setGetPrice={setGetPrice}></TabSection>
     <StepsSection></StepsSection>
     <PricingSection></PricingSection>
     {/* <WorkflowSection></WorkflowSection> */}
