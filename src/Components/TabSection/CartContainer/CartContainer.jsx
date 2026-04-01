@@ -63,7 +63,7 @@ const CartContainer = ({cart, setCart}) => {
                 <p className='font-bold text-xl opacity-60'>Your cart is empty.</p>
             </div> :
             <div className=' overflow-hidden'>
-                <li className="px-5 md:px-7 lg:px-12 opacity-60 tracking-wide flex items-center justify-between text-2xl font-bold"><span>Total</span><span>$ {totalPrice}</span></li>
+                <li className="px-5 md:px-7 lg:px-12 opacity-60 tracking-wide flex items-center justify-between text-2xl font-bold"><span>Total</span><span>$ {totalPrice.toFixed(2)}</span></li>
 
                 <div className='px-4 md:px-4 lg:px-10 py-2  flex justify-center items-center'>
                     <button 
