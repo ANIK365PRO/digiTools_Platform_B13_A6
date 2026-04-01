@@ -15,7 +15,7 @@ const Banner = () => {
                     software—all in one place. Start creating faster today. <br />
                     Explore Products</p>
                     <div className='space-x-4'>
-                        <button className='btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white font-bold tex-lg rounded-3xl'>Explore Products</button>
+                        <button className='btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white font-bold text-lg rounded-3xl'>Explore Products</button>
                         <button className='btn font-bold tex-lg rounded-3xl'><BsPlay /> Watch Demo</button>
                     </div>
                 </div>

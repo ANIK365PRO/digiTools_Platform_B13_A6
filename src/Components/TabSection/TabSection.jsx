@@ -3,7 +3,7 @@ import Products from './Procudts/Products';
 import CartContainer from './CartContainer/CartContainer';
 
 
-const TabSection = ({productsPromise}) => {
+const TabSection = ({productsPromise, cart, setCart}) => {
     const productsData = use(productsPromise)
     // console.log(productsData)
 
@@ -22,18 +22,18 @@ const TabSection = ({productsPromise}) => {
                     to boost your productivity and creativity.</p>
 
                     {/* name of each tab group should be unique */}
-                    <div className="tabs tabs-box bg-transparent justify-center pt-5">
+                    <div className="tabs tabs-box inline-block justify-center  mt-5 py-1 rounded-3xl items-center">
                         <input 
                          type="radio"
                          name="my_tabs_1" 
-                         className={`tab text-lg font-bold text-black w-40 rounded-2xl border ${activeTab === 'Products' && 'btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'}`} 
+                         className={`tab text-lg font-bold text-black w-30 lg:w-40 rounded-3xl border ${activeTab === 'Products' && 'btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'}`} 
                          aria-label="Products" 
                          onClick={()=> handleActiveTab('Products')}
                          defaultChecked/>
                         <input
                          type="radio" 
                          name="my_tabs_1" 
-                         className={`tab text-lg font-bold text-black w-40 rounded-2xl border ${activeTab === 'Cart' && 'btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'}`} 
+                         className={`tab text-lg font-bold text-black w-30 lg:w-40 rounded-3xl border ${activeTab === 'Cart' && 'btn bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'}`} 
                          aria-label="Cart (0)" 
                           onClick={()=> handleActiveTab('Cart')} />
                       
@@ -43,7 +43,11 @@ const TabSection = ({productsPromise}) => {
 
                     {
                         activeTab === "Products" ? 
-                        <Products productsData={productsData}></Products>: 
+                        <Products 
+                        productsData={productsData}
+                        cart={cart} 
+                        setCart={setCart}
+                        ></Products>: 
                         <CartContainer></CartContainer>
                     }
         

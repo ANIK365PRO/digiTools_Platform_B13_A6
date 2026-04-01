@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const ProductsCard = ({product}) => {
+const ProductsCard = ({product, cart, setCart}) => {
+
+    const [isBuy, setIsBuy] = useState(false)
+    const handleIsBuy = () =>{
+        setIsBuy(true)
+    }
+
     return (
-        <div className={`card w-full shadow-2xl rounded-2xl py-5`}>
+        <div className={`card w-full shadow-2xl rounded-3xl py-5`}>
             <div className="card-body">
 
-                        <p className="flex justify-end items-center ">
+                        <p className="flex justify-end items-center animate-pulse">
                             
-                            <span className={`absolute top-2  py-1 px-4 rounded-2xl shadow ${product.tag === 'best seller' && 'bg-[#fef3c6FF] text-[#bb4d00]'} ${product.tag === 'new' && 'bg-purple-200 text-purple-800'} ${product.tag === 'popular' && 'bg-green-200 text-green-600'}`}>{product.tag}</span>
+                            <span className={`absolute top-2  py-1 px-4 rounded-2xl shadow-xl ${product.tag === 'best seller' && 'bg-[#fef3c6FF] text-[#bb4d00]'} ${product.tag === 'new' && 'bg-purple-200 text-purple-800'} ${product.tag === 'popular' && 'bg-green-200 text-green-600'}`}>{product.tag}</span>
                             
                             </p>
                         <div className="space-y-4">
@@ -33,7 +39,13 @@ const ProductsCard = ({product}) => {
                         
                         </ul>
                         <div className="mt-6">
-                        <button className={`btn btn-primary bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white btn-block font-bold rounded-2xl`}>Buy Now</button>
+                        <button 
+                        onClick={handleIsBuy}
+                        className={`btn 
+                            ${isBuy? 'bg-linear-to-r from-green-600 vai-green-500 to-green-400 text-white' : 
+                            'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'} btn-block text-lg font-bold rounded-3xl`}>
+                            {isBuy? 'Add to Cart': 'Buy Now'}
+                        </button>
                         </div>
             </div>
         </div>

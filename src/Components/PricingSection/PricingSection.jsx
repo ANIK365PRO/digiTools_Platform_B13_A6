@@ -21,7 +21,7 @@ const PricingSection = () => {
             <section className='mt-10 px-5 lg:px-0 grid md:grid-cols-3 gap-7'>
                
                {
-                pricingInfo.map(pricingCard =>  <div key={pricingCard.id} className={`card w-full ${pricingCard.status ? 'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white' : 'bg-[#f9fafcFF]'  }  border-[#f1f1f1FF]  shadow-lg`}>
+                pricingInfo.map(pricingCard =>  <div key={pricingCard.id} className={`card w-full ${pricingCard.status ? 'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white' : 'bg-[#f9fafcFF]'  }  border-[#f1f1f1FF]  shadow-lg rounded-3xl`}>
                     <div className="card-body">
 
                         <p className="flex justify-center items-center ">
@@ -49,7 +49,7 @@ const PricingSection = () => {
                         
                         </ul>
                         <div className="mt-6">
-                        <button className={`btn btn-primary ${pricingCard.status? 'bg-[#f9fafcFF] text-[#AF2CF3]' : 'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'} btn-block font-bold rounded-2xl`}>{pricingCard.buttonName}</button>
+                        <button className={`btn btn-primary ${pricingCard.status? 'bg-[#f9fafcFF] text-[#AF2CF3]' : 'bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white'} btn-block font-bold rounded-3xl`}>{pricingCard.buttonName}</button>
                         </div>
                     </div>
                 </div>)

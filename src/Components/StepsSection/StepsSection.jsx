@@ -13,7 +13,7 @@ const StepsSection = () => {
 
         <div className='max-w-7xl mx-auto pt-12 px-5 lg:px-0 grid md:grid-cols-3 gap-7 '>
             
-            <section className='relative border border-[#f1f1f1FF] px-5 lg:px-10 py-20 rounded-2xl shadow-2xl bg-[#ffffff]'>
+            <section className='relative border border-[#f1f1f1FF] px-5 lg:px-10 py-20 rounded-3xl shadow-2xl bg-[#ffffff]'>
                 <div className='flex justify-center items-center rounded-t-2xl '>
 
                     <div className='w-32 h-32 rounded-full bg-zinc-200 flex items-center justify-center'>
@@ -29,7 +29,7 @@ const StepsSection = () => {
                 <p className='w-8 h-8 rounded-full font-medium bg-[#AF2CF3] text-white flex items-center justify-center absolute top-10 right-10'>01</p>
             </section>
 
-            <section className='relative border border-[#f1f1f1FF] px-5 lg:px-10 py-20 rounded-2xl shadow-2xl bg-[#ffffff]'>
+            <section className='relative border border-[#f1f1f1FF] px-5 lg:px-10 py-20 rounded-3xl shadow-2xl bg-[#ffffff]'>
                 <div className='flex justify-center items-center rounded-t-2xl '>
 
                     <div className='w-32 h-32 rounded-full bg-zinc-200 flex items-center justify-center'>
@@ -46,7 +46,7 @@ const StepsSection = () => {
                 <p className='w-8 h-8 rounded-full font-medium bg-[#AF2CF3] text-white flex items-center justify-center absolute top-10 right-10'>02</p>
             </section>
 
-            <section className='relative border border-[#f1f1f1FF] px-5 lg:px-10 py-20 rounded-2xl shadow-2xl bg-[#ffffff]'>
+            <section className='relative border border-[#f1f1f1FF] px-5 lg:px-10 py-20 rounded-3xl shadow-2xl bg-[#ffffff]'>
                 <div className='flex justify-center items-center rounded-t-2xl '>
 
                     <div className='w-32 h-32 rounded-full bg-zinc-200 flex items-center justify-center'>
