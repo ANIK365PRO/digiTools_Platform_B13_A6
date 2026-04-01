@@ -9,12 +9,19 @@ const ProductsCard = ({product, cart, setCart, setGetPrice}) => {
     const handleIsBuy = (product) =>{
         // console.log(product)
 
+        // check if second time added 
+         const isBuyFound = cart.find(unit => unit.id === product.id)
+        if(isBuyFound){
+            toast.error(`${product.name} , is already added!!!`)
+            return
+        }
+
         setIsBuy(true)
         setCart([...cart, product])
          toast.success(`${product.name}, is add to cart.`)
         handleGetTotalItemsPrice()
     }
-    
+
     // for navBar cart , when item select then price count 
     const handleGetTotalItemsPrice = () =>{
         

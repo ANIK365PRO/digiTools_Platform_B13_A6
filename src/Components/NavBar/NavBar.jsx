@@ -13,7 +13,7 @@ const NavBar = ({cart, getPrice}) => {
     const navLink = navInfo.map(info => <li key={info.id} className='font-semibold hover:bg-zinc-100'><a href={info.link}>{info.name}</a></li>)
 
     return (
-        <div className='bg-base-100  shadow-sm'>
+        <div className='bg-base-100  shadow-sm sticky top-0 z-10'>
             <div className="navbar max-w-7xl mx-auto p-0">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -59,7 +59,7 @@ const NavBar = ({cart, getPrice}) => {
                             className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
                                 <div className="card-body">
                                     <span className="text-lg font-bold">{cart.length} Items</span>
-                                    <span className="text-info">Subtotal: ${getPrice}</span>
+                                    <span className="text-info">Subtotal: $ {getPrice}</span>
                                     <div className="card-actions">
                                         <button className="btn btn-primary btn-block">View cart</button>
                                     </div>
@@ -68,7 +68,7 @@ const NavBar = ({cart, getPrice}) => {
 
                         </div>
 
-                    <a href="/login" className='lg:flex hidden hover:bg-zinc-200 rounded-sm p-2'>Login</a>
+                    <a href="#" className='lg:flex hidden hover:bg-zinc-200 rounded-sm p-2'>Login</a>
                     <a className="btn rounded-4xl bg-[#4F39F6] text-white lg:flex hidden">Get Started</a>
 
                 </div>
