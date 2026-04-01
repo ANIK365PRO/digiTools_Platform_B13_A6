@@ -35,7 +35,7 @@ const NavBar = ({cart, getPrice}) => {
                         
                     </div>
                 
-                    <a className="text-2xl font-black text-[#4F39F6]">DigiTols</a>
+                    <a className="text-2xl font-black bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] bg-clip-text text-transparent">DigiTools</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-4 p-2">

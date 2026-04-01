@@ -34,8 +34,8 @@ function App() {
     <TabSection productsPromise={productsPromise} cart={cart} setCart={setCart} setGetPrice={setGetPrice}></TabSection>
     <StepsSection></StepsSection>
     <PricingSection></PricingSection>
-    {/* <WorkflowSection></WorkflowSection> */}
-    {/* <Footer></Footer> */}
+    <WorkflowSection></WorkflowSection>
+    <Footer></Footer>
    
     <ToastContainer />
   </>
