@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiShoppingCart } from 'react-icons/fi';
+import { toast } from 'react-toastify';
 
 const CartContainer = ({cart, setCart}) => {
     console.log(cart)
@@ -11,6 +12,7 @@ const CartContainer = ({cart, setCart}) => {
     // for handle Checkout when payment clear
     const handleCheck = () =>{
         setCart([])
+        toast.success(`Proceed to Checkout completed.`)
     }  
 
     // cart item delate when click delate btn
@@ -18,6 +20,7 @@ const CartContainer = ({cart, setCart}) => {
         // console.log(item)
         const filteredProduct = cart.filter(units => units.id !== item.id )
         setCart(filteredProduct) 
+        toast.warning(`${item.name}, is deleted !!!`)
     }
 
 

@@ -8,6 +8,7 @@ import Status from './Components/Status/Status'
 import StepsSection from './Components/StepsSection/StepsSection'
 import TabSection from './Components/TabSection/TabSection'
 import WorkflowSection from './Components/WorkflowScetion/WorkflowSection'
+import { ToastContainer } from 'react-toastify'
 
 
 const getProductsData = async() => {
@@ -34,7 +35,7 @@ function App() {
     {/* <WorkflowSection></WorkflowSection> */}
     {/* <Footer></Footer> */}
    
-    
+    <ToastContainer />
   </>
   )
 }
