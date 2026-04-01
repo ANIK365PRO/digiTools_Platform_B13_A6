@@ -2,6 +2,11 @@ import React from 'react';
 
 const CartContainer = ({cart, setCart}) => {
     console.log(cart)
+
+    // for count total price use reduce loop 
+    const totalPrice = cart.reduce((sum, item) => sum + item.price, 0)
+    console.log(totalPrice)
+
     return (
         <ul className="list bg-base-100 rounded-box shadow-md border-t border-zinc-100 py-6 lg:py-10 mt-5">
   
@@ -31,7 +36,7 @@ const CartContainer = ({cart, setCart}) => {
 
 
         {/* total Amount and checkout section */}
-          <li className="px-5 md:px-7 lg:px-12 opacity-60 tracking-wide flex items-center justify-between text-2xl font-bold"><span>Total</span><span>$ 0</span></li>
+          <li className="px-5 md:px-7 lg:px-12 opacity-60 tracking-wide flex items-center justify-between text-2xl font-bold"><span>Total</span><span>$ {totalPrice}</span></li>
 
          <button className="btn btn-ghost bg-linear-to-r from-[#612ff7] via-[#9638F2] vai-[#831EF9] to-[#AF2CF3] text-white font-bold mt-4 mx-4 md:mx-6 lg:mx-10 tracking-wide text-2xl rounded-3xl text-center">Proceed to Checkout</button>
 
